@@ -4,7 +4,10 @@ import { useNavigate } from 'react-router-dom'
 function Random() {
     const navigate = useNavigate()
     const [random, setRandom ] = useState()
-    fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+    fetch('https://www.themealdb.com/api/json/v1/1/random.php',
+    {headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+    }})
     .then(res => res.json())
     .then(data => {setRandom(data.meals[0]['idMeal'])})
 

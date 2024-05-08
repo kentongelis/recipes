@@ -1,0 +1,76 @@
+header {
+    text-align : center;
+}
+
+h1.Title {
+    font-family: cursive; 
+    font-size: 50px
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.menu-item-trigger {
+    display: none
+  }
+
+@media (min-width: 641px) and (max-width: 992px) {
+
+    .buttons {
+        font-size: 30px;
+    }
+
+    .Random {
+        padding : 10px;
+        font-size: 20px;
+    } 
+    
+    h1.Title  {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+
+    .menu-item-trigger {
+        display: block;
+        text-align : right;
+        font-size: 50px;
+        padding: 0.5rem;
+      }
+
+    .Title {
+        display: block;
+    }
+
+    .Title.is-open {
+        display:none;
+    }
+
+    .buttons {
+        display: none
+    }
+
+    .buttons.is-open {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+        padding : 1rem;
+    }
+
+    a {
+        font-size: 30px;
+    }
+
+    .Random {
+        padding : 5px;
+        font-size: 20px;
+    } 
+}
